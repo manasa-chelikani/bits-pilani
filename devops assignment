@@ -1,0 +1,13 @@
+# Code
+
+p = input(‘Enter Phone Number : ‘)
+val = False
+# length must be 12
+if len(p) == 12 and p[3] == ‘-‘ and p[7] == ‘-‘:
+if (p[:3]+p[4:7]+p[8:]).isdigit(): # all the characters except dashes should be digits
+val = True
+
+if val:
+    print(p, ‘is valid’)
+else:
+    print(p, ‘is invalid’)
